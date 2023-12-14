@@ -5,18 +5,20 @@ import { colors } from '../global/colors'
 export const Header = ({titleProp}) => {
   return (
     <View style={styles.headerContainer}>
-      <Image style={styles.headerLogo} source={require('../assets/img/icons/logo.png')}/>
       <Text style={styles.titleLogo}>{titleProp}</Text>
+      <Image style={styles.headerLogo} source={require('../assets/img/icons/logo.png')}/>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
     headerContainer: {
-        justifyContent: 'flex-end',
+        flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'space-between',
         backgroundColor: '#242F40',
         height: 100,
+        padding: 30
     },
     headerLogo: {
         width: 50,
@@ -28,6 +30,6 @@ const styles = StyleSheet.create({
         color: colors.mainColor,
         textTransform: 'uppercase',
         fontFamily: 'PressStart2P-Regular',
-        marginTop: 5
+        paddingTop: 10
     }
 })

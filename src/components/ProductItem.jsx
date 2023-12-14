@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text } from 'react-native'
 import React from 'react'
 import { Card } from './Card'
 import { Pressable } from 'react-native'
@@ -7,11 +7,12 @@ export const ProductItem = ({item}) => {
   return (
     <Card>
         <Pressable style={styles.containerProductItem}>
-            <Text style={styles.titleProductItem}>{item.nombre}</Text>
             <Image
                 style={styles.imageProductItem}
+                resizeMode='cover'
                 source={{uri: item.portada}}
             />
+            <Text style={styles.titleProductItem}>{item.nombre}</Text>
         </Pressable>
     </Card>
   )
@@ -29,8 +30,7 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
     },
     imageProductItem: {
-        width: 50,
-        height: 50,
-        resizeMode: 'contain'
+        width: 60,
+        height: 60,
     }
 })

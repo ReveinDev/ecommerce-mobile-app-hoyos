@@ -2,7 +2,7 @@
     {
         "id": 0,
         "nombre": "CALL OF DUTY® MODERN WARFARE® 2",
-        "portada": "../assets/img/games/codmw2.webp",
+        "portada": "require('../assets/img/games/codmw2.webp')",
         "trailer": "https://www.youtube.com/embed/7el5VW1wij0",
         "descripcion": "En Call of Duty®: Modern Warfare® II, los jugadores se verán inmersos en un conflicto a escala global sin precedentes que incluye el regreso de Operadores icónicos de la fuerza operativa 141.",
         "genero": "accion",

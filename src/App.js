@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { registerRootComponent } from "expo";
 import { Categories } from "./screens/Categories";
 import { ActivityIndicator } from "react-native";
@@ -12,13 +12,26 @@ export default function App() {
     'PressStart2P-Regular': require('./assets/fonts/PressStart2P-Regular.ttf'),
   })
 
+  const [categorySelected, setCategorySelected] = useState('')
+
   if (!fontsLoaded) {
     return <ActivityIndicator />
   }
 
+  const onSelectCategory = (category) => {
+    setCategorySelected(category)
+  }
+
   return (
-      // <Categories />
-      <ProductsByCategory />
+    <>
+      {
+        categorySelected
+        ?
+        <ProductsByCategory category={categorySelected} />
+        :
+        <Categories onSelectCategoryEvent={onSelectCategory} />
+      }
+    </>
   );
 }
 

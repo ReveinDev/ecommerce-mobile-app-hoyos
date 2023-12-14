@@ -2,9 +2,9 @@ import { StyleSheet, Text, Pressable } from 'react-native'
 import React from 'react'
 import { Card } from './Card'
 
-export const CategoryItem = ({category}) => {
+export const CategoryItem = ({category, onSelectCategoryEvent}) => {
   return (
-    <Pressable onPress={null}>
+    <Pressable onPress={() => onSelectCategoryEvent(category)}>
         <Card style={styles.cardContainer}>
             <Text style={styles.text}>{category}</Text>
         </Card>
