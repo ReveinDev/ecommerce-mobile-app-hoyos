@@ -4,9 +4,9 @@ import categorias from '../data/categorias.json'
 import { CategoryItem } from '../components/CategoryItem'
 import { Header } from '../components/Header'
 
-export const Categories = ({onSelectCategoryEvent}) => {
+export const Categories = ({navigation}) => {
   const renderItem = ({item}) => (
-    <CategoryItem category={item} onSelectCategoryEvent={onSelectCategoryEvent}/>
+    <CategoryItem category={item} navigation={navigation}/>
   )
 
   return (

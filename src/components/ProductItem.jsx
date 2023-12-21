@@ -3,16 +3,16 @@ import React from 'react'
 import { Card } from './Card'
 import { Pressable } from 'react-native'
 
-export const ProductItem = ({item}) => {
+export const ProductItem = ({gameId, navigation}) => {
   return (
     <Card>
-        <Pressable style={styles.containerProductItem}>
+        <Pressable style={styles.containerProductItem} onPress={() => navigation.navigate("Detalle del Juego")}>
             <Image
                 style={styles.imageProductItem}
                 resizeMode='cover'
-                source={{uri: item.portada}}
+                source={{uri: gameId.portada}}
             />
-            <Text style={styles.titleProductItem}>{item.nombre}</Text>
+            <Text style={styles.titleProductItem}>{gameId.nombre}</Text>
         </Pressable>
     </Card>
   )

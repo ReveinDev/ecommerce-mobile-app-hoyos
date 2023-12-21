@@ -4,8 +4,10 @@ import games from '../data/games.json'
 import { ProductItem } from '../components/ProductItem'
 import { Header } from '../components/Header'
 
-export const ProductsByCategory = ({category}) => {
-  const [gamesByCategory, setGamesByCategory] = useState()
+export const ProductsByCategory = ({navigation, route}) => {
+  const [gamesByCategory, setGamesByCategory] = useState([])
+
+  const {category} = route.params
 
   useEffect(() => {
     const gamesFilterByCategory = games.filter(game => game.genero === category)
@@ -13,7 +15,7 @@ export const ProductsByCategory = ({category}) => {
   }, [category])
 
   const renderItem = ({item}) => (
-    <ProductItem item={item}/>
+    <ProductItem gameId={item} navigation={navigation}/>
   )
 
   return (
