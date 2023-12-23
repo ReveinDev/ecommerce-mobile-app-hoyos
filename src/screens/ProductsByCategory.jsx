@@ -1,8 +1,8 @@
-import { FlatList, StyleSheet } from 'react-native'
+import { FlatList, StyleSheet, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import games from '../data/games.json'
 import { ProductItem } from '../components/ProductItem'
-import { Header } from '../components/Header'
+import { colors } from '../global/colors'
 
 export const ProductsByCategory = ({navigation, route}) => {
   const [gamesByCategory, setGamesByCategory] = useState([])
@@ -15,19 +15,25 @@ export const ProductsByCategory = ({navigation, route}) => {
   }, [category])
 
   const renderItem = ({item}) => (
-    <ProductItem gameId={item} navigation={navigation}/>
+    <ProductItem item={item} navigation={navigation}/>
   )
 
   return (
-    <>
-      <Header titleProp={"Juegos"}/>
+    <View style={styles.gamesContainer}>
       <FlatList
+        style={styles.gamesContainer}
         data={gamesByCategory}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
-    </>
+    </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  gamesContainer: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: colors.mainDark,
+  }
+})

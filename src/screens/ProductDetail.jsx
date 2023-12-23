@@ -1,50 +1,93 @@
-import { ActivityIndicator, Image, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
+import { Image, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import games from '../data/games.json'
+import { colors } from '../global/colors'
 
 export const ProductDetail = ({route}) => {
-  const [getGameById, setGetGameById] = useState({})
-  const [isLoading, setIsLoading] = useState(true)
   const [isPortrait, setIsProtrait] = useState(true)
 
   const { height, width } = useWindowDimensions()
   
-  const gameId = route.params
+  const {item} = route.params
 
   useEffect(() => {
     height < width ? setIsProtrait(false) : setIsProtrait(true)
   }, [height])
 
-  useEffect(() => {
-    const gameFindById = games.find(game => game.id === gameId)
-    setGetGameById(gameFindById)
-    setIsLoading(false)
-  }, [gameId])
-
   return (
     <>
-      {
-      isLoading
-      ?
-      <ActivityIndicator/>
-      :
-      <>
-        <ScrollView>
-          <Image
-            source={{uri: getGameById.portada}}
-            resizeMode='cover' 
-          />
-          <View>
-            <Text>{getGameById.nombre}</Text>
-            <Text>{getGameById.descripcion}</Text>
-            <Text>$ {getGameById.precio}</Text>
-            <Pressable onPress={() => null}>COMPRAR</Pressable>
-          </View>
-        </ScrollView>
-      </>
-      }
+      <ScrollView contentContainerStyle={styles.gameDetailContainer}>
+        <Image
+          source={{uri: item.portada}}
+          style={isPortrait ? styles.gameDetailImage : styles.gameDetailImageLandscape}
+        />
+        <View style={{alignItems: 'center'}}>
+          <Text style={styles.gameDetailTitle}>{item.nombre}</Text>
+          <Text style={styles.gameDetailDescription}>{item.descripcion}</Text>
+          <Text style={styles.gameDetailPrice}>$ {item.precio}</Text>
+          <Pressable style={styles.gameDetailBuyButton} onPress={() => null}>
+            <Text style={styles.gameDetailBuyButtonText}>COMPRAR</Text>
+          </Pressable>
+        </View>
+      </ScrollView>
     </>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  gameDetailContainer: {
+    width: '100%',
+    backgroundColor: colors.mainDark,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+  },
+  gameDetailImage: {
+    width: 300,
+    height: 200,
+    borderColor: colors.secondaryColor,
+    borderWidth: 3,
+    borderRadius: 5,
+  },
+  gameDetailImageLandscape: {
+    width: 500,
+    height: 300,
+    borderColor: colors.secondaryColor,
+    borderWidth: 3,
+    borderRadius: 5,
+  },
+  gameDetailTitle: {
+    color: colors.secondaryColor,
+    padding: 10,
+    textAlign: 'center',
+    fontFamily: 'ArchivoBlack-Regular',
+    fontSize: 25,
+  },
+  gameDetailDescription: {
+    color: colors.mainLight,
+    padding: 5,
+    textAlign: 'center',
+    fontFamily: 'Rubik-Regular',
+    fontSize: 18,
+  },
+  gameDetailPrice: {
+    color: colors.mainColor,
+    padding: 20,
+    textAlign: 'center',
+    fontFamily: 'PressStart2P-Regular',
+    fontSize: 20,
+  },
+  gameDetailBuyButton: {
+    backgroundColor: colors.secondaryColor,
+    padding: 10,
+    borderRadius: 5,
+    borderWidth: 2,
+    width: '50%',
+    marginBottom: 10,
+  },
+  gameDetailBuyButtonText: {
+    color: colors.mainDark,
+    textAlign: 'center',
+    fontFamily: 'BebasNeue-Regular',
+    fontSize: 25,
+  }
+})

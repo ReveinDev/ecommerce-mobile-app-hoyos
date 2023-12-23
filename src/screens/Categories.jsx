@@ -2,7 +2,7 @@ import { FlatList, StyleSheet, View } from 'react-native'
 import React from 'react'
 import categorias from '../data/categorias.json'
 import { CategoryItem } from '../components/CategoryItem'
-import { Header } from '../components/Header'
+import { colors } from '../global/colors'
 
 export const Categories = ({navigation}) => {
   const renderItem = ({item}) => (
@@ -11,7 +11,6 @@ export const Categories = ({navigation}) => {
 
   return (
     <View style={styles.categoriesContainer}>
-        <Header titleProp={"CATEGORIAS"}/>
         <FlatList
             style={styles.categoriesContainer}
             renderItem={renderItem}
@@ -26,5 +25,6 @@ const styles = StyleSheet.create({
     categoriesContainer: {
         flex: 1,
         width: '100%',
+        backgroundColor: colors.mainDark,
     }
 })

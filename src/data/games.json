@@ -2,67 +2,66 @@
     {
         "id": 0,
         "nombre": "CALL OF DUTY® MODERN WARFARE® 2",
-        "portada": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.marca.com%2Fvideojuegos%2F2022%2F06%2F08%2F62a0d369ca4741bc608b45b7.html&psig=AOvVaw2637yP9_EIw-7xPCFkUrvL&ust=1703210474504000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJDo-M63n4MDFQAAAAAdAAAAABAD",
-        "trailer": "https://www.youtube.com/embed/7el5VW1wij0",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/codmw2.webp?token=GHSAT0AAAAAACKVI2ABAU2NZBRANFR5QG6OZMGCANA",
         "descripcion": "En Call of Duty®: Modern Warfare® II, los jugadores se verán inmersos en un conflicto a escala global sin precedentes que incluye el regreso de Operadores icónicos de la fuerza operativa 141.",
         "genero": "accion",
         "tipo": "fps",
-        "precio": 6990
+        "precio": 22275
     },
     {
         "id": 1,
         "nombre": "TOM CLANCY'S RAINBOW SIX® SIEGE",
-        "portada": "../assets/img/games/tcrss.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/tcrss.webp?token=GHSAT0AAAAAACKVI2ABKMLOC77COLBOFBUGZMGCAWA",
         "trailer": "https://www.youtube.com/embed/ACwcjOgDgoc",
         "descripcion": "Tom Clancy's Rainbow Six® Siege es un shooter táctico realista por equipos donde una cuidadosa planificación y ejecución son claves para la victoria.",
         "genero": "accion",
         "tipo": "fps",
-        "precio": 1999
+        "precio": 5670
     },
     {
         "id": 2,
         "nombre": "HALO: THE MASTER CHIEF COLLECTION",
-        "portada": "../assets/img/games/htmcc.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/htmcc.webp?token=GHSAT0AAAAAACKVI2AAH3SFENQ64CCCM7EYZMGCBIA",
         "trailer": "https://www.youtube.com/embed/sUH4cv9EPwI",
         "descripcion": "El emblemático viaje del Jefe Maestro incluye seis juegos creados para PC y recopilados en una sola experiencia. Ya seas un seguidor de toda la vida o descubras al Spartan 117 por primera vez, la colección Jefe Maestro te resultará la experiencia de juego definitiva de Halo.",
         "genero": "accion",
         "tipo": "fps",
-        "precio": 3999
+        "precio": 6412
     },
     {
         "id": 3,
         "nombre": "DEVIL MAY CRY 5",
-        "portada": "../assets/img/games/dmc5.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/dmc5.webp?token=GHSAT0AAAAAACKVI2ABHISRPIQSYF3V24IKZMGCBUA",
         "trailer": "https://www.youtube.com/embed/sXWDGAFJvFk",
         "descripcion": "El cazademonios definitivo vuelve con estilo en el juego que los fans de la acción estaban esperando.",
         "genero": "accion",
         "tipo": "has",
-        "precio": 2420
+        "precio": 6682
     },
     {
         "id": 4,
         "nombre": "GOD OF WAR",
-        "portada": "../assets/img/games/gow.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/gow.webp?token=GHSAT0AAAAAACKVI2AARIJCQRTWUYG2U74KZMGCB5A",
         "trailer": "https://www.youtube.com/embed/snoXnOo63xQ",
         "descripcion": "Kratos ha dejado atrás su venganza contra los dioses del Olimpo y vive ahora como un hombre en los dominios de los dioses y monstruos nórdicos. En este mundo cruel e implacable debe luchar para sobrevivir… y enseñar a su hijo a hacerlo también.",
         "genero": "accion",
         "tipo": "has",
-        "precio": 8499
+        "precio": 15512
     },
     {
         "id": 5,
         "nombre": "HADES",
-        "portada": "../assets/img/games/hades.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/hades.webp?token=GHSAT0AAAAAACKVI2AB4PHHEDIB63USTWSQZMGCCGQ",
         "trailer": "https://www.youtube.com/embed/91t0ha9x0AE",
         "descripcion": "Desafía al dios de los muertos y protagoniza una salvaje fuga del Inframundo en este juego de exploración de mazmorras de los creadores de Bastion, Transistor y Pyre.",
         "genero": "accion",
         "tipo": "has",
-        "precio": 1750
+        "precio": 8437
     },
     {
         "id": 6,
         "nombre": "EA SPORTS™ FIFA 23",
-        "portada": "../assets/img/games/f23.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/f23.webp?token=GHSAT0AAAAAACKVI2AB7SR2BWFD4KGXCIQCZMGCCPQ",
         "trailer": "https://www.youtube.com/embed/VcSnj0fU8BM",
         "descripcion": "FIFA 23 nos acerca a The World's Game con la tecnología HyperMotion2, la FIFA World Cup™ masculina y femenina disponibles durante la temporada, clubes femeninos, función de juego cruzado* y mucho más.",
         "genero": "deportes",
@@ -72,231 +71,231 @@
     {
         "id": 7,
         "nombre": "NBA 2K23",
-        "portada": "../assets/img/games/nba2k23.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/nba2k23.webp?token=GHSAT0AAAAAACKVI2ABZAZEFRF36W7QHUUKZMGCCXQ",
         "trailer": "https://www.youtube.com/embed/HcHTGiqfnQM",
         "descripcion": "Ponte a la altura de las circunstancias en NBA 2K23. Demuestra tu talento en Mi CARRERA. Empareja a All-Stars con leyendas eternas en MyTEAM. Construye tu propia dinastía en Mi GM, o guía a la NBA en una nueva dirección con Mi LIGA.",
         "genero": "deportes",
         "tipo": "simdep",
-        "precio": 6999
+        "precio": 36437
     },
     {
         "id": 8,
         "nombre": "WWE 2K23",
-        "portada": "../assets/img/games/wwe2k23.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/wwe2k23.webp?token=GHSAT0AAAAAACKVI2AABR3BBINFGC6IMN4QZMGCDDA",
         "trailer": "https://www.youtube.com/embed/OvYQeDHR650",
         "descripcion": "WWE 2K23 es Aún Más Fuerte con características ampliadas, magníficos gráficos y un profundo plantel de Superestrellas y Leyendas de la WWE. Vuelve 2K Showcase, un documental deportivo interactivo centrado en los 20 años de carrera de John Cena, y por fin llega WarGames.",
         "genero": "deportes",
         "tipo": "simdep",
-        "precio": 7999
+        "precio": 12028
     },
     {
         "id": 9,
         "nombre": "FORZA HORIZON 5",
-        "portada": "../assets/img/games/fh5.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/fh5.webp?token=GHSAT0AAAAAACKVI2AANQOHEBFJTERRE2D4ZMGCDTQ",
         "trailer": "https://www.youtube.com/embed/ddGQhJ80pvM",
         "descripcion": "Explora los vibrantes paisajes del mundo abierto de México y disfruta de una diversión sin límites al volante de los mejores coches del mundo. Conquista la escarpada Sierra Nueva en la experiencia definitiva del rally de Horizon.",
         "genero": "deportes",
         "tipo": "carreras",
-        "precio": 9999
+        "precio": 18212
     },
     {
         "id": 10,
         "nombre": "BEAMNG.DRIVE",
-        "portada": "../assets/img/games/bngd.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/bngd.webp?token=GHSAT0AAAAAACKVI2ABHRU5VB7AHJBFUESMZMGCD3A",
         "trailer": "https://www.youtube.com/embed/7vGYVUCmxeI",
         "descripcion": "A dynamic soft-body physics vehicle simulator capable of doing just about anything.",
         "genero": "deportes",
         "tipo": "carreras",
-        "precio": 1750
+        "precio": 13486
     },
     {
         "id": 11,
         "nombre": "ASSETTO CORSA COMPETIZIONE",
-        "portada": "../assets/img/games/acc.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/acc.webp?token=GHSAT0AAAAAACKVI2ABAWEE6S2PVQKWGUFOZMGCECA",
         "trailer": "https://www.youtube.com/embed/ZULoIM7KvKU",
         "descripcion": "Assetto Corsa Competizione es el nuevo juego oficial de la Blancpain GT Series. La excelente simulación del juego te permitirá experimentar la auténtica atmósfera de un campeonato homologado por la FIA GT3, en el que te enfrentarás a circuitos, vehículos, equipos y pilotos oficiales.",
         "genero": "deportes",
         "tipo": "carreras",
-        "precio": 1499
+        "precio": 7695
     },
     {
         "id": 12,
         "nombre": "CULT OF THE LAMB",
-        "portada": "../assets/img/games/cotl.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/cotl.webp?token=GHSAT0AAAAAACKVI2AB527APMDFA5BEV4I6ZMGCEHQ",
         "trailer": "https://www.youtube.com/embed/QEes2DC_cw4",
         "descripcion": "Crea tu propia secta en una tierra de falsos profetas, aventurándote en regiones diversas y misteriosas para construir una leal comunidad de adeptos de los bosques, y difunde tu Palabra para convertir tu secta en la única y verdadera.",
         "genero": "estrategia",
         "tipo": "city",
-        "precio": 1199
+        "precio": 10111
     },
     {
         "id": 13,
         "nombre": "RIMWORLD",
-        "portada": "../assets/img/games/rw.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/rw.webp?token=GHSAT0AAAAAACKVI2ABSW4FRUHI7BIR6JZMZMGCENQ",
         "trailer": "https://www.youtube.com/embed/3tDrxOASUog",
         "descripcion": "Un simulador de colonias de ciencia ficción dirigido por una brillante Inteligencia Artificial que narrará la historia. Genera historias al simular psicología, ecología, combate, clima, biomas, diplomacia, relaciones interpersonales, arte, medicina, comercio y mucho más.",
         "genero": "estrategia",
         "tipo": "city",
-        "precio": 2100
+        "precio": 19427
     },
     {
         "id": 14,
         "nombre": "CITIES: SKYLINES",
-        "portada": "../assets/img/games/cs.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/cs.webp?token=GHSAT0AAAAAACKVI2AA42MYO5LJR3AWHTTAZMGCEUA",
         "trailer": "https://www.youtube.com/embed/ez8Rfyi0UJw",
         "descripcion": "Introduce nuevos elementos a la mecánica de juego para plasmar la emoción y las complicaciones de mantener una ciudad de verdad, ampliando al mismo tiempo algunos de los temas ya conocidos de la experiencia del desarrollo urbanístico.",
         "genero": "estrategia",
         "tipo": "city",
-        "precio": 2100
+        "precio": 6075
     },
     {
         "id": 15,
         "nombre": "CRUSADERS KINGS III",
-        "portada": "../assets/img/games/ck3.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/ck3.webp?token=GHSAT0AAAAAACKVI2AASATHESB2KLQYDAF6ZMGCE2A",
         "trailer": "https://www.youtube.com/embed/oDArDCT81wo",
         "descripcion": "Ama, lucha, planea y reclama la grandeza. Determina el legado de tu casa nobiliaria en la gran estrategia en expansión de Crusader Kings III. La muerte solo es el comienzo mientras lideras el linaje de tu dinastía en esta completa simulación realista de la Edad Media.",
         "genero": "estrategia",
         "tipo": "etr",
-        "precio": 3200
+        "precio": 15512
     },
     {
         "id": 16,
         "nombre": "AGE OF EMPIRE II: DEFINITIVE EDITION",
-        "portada": "../assets/img/games/aoe2de.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/aoe2de.webp?token=GHSAT0AAAAAACKVI2AAHNRV74E74UVW3PVAZMGCFCA",
         "trailer": "https://www.youtube.com/embed/A0UwnsBOPPI",
         "descripcion": "Age of Empires II: Definitive Edition incluye 'Los últimos khanes', que incorpora 3 campañas y 4 civilizaciones nuevas. Las frecuentes actualizaciones contienen eventos, contenido adicional, nuevos modos de juego (¡como el reciente modo cooperativo!) y funciones mejoradas.",
         "genero": "estrategia",
         "tipo": "etr",
-        "precio": 1999
+        "precio": 3537
     },
     {
         "id": 17,
         "nombre": "TOTAL WAR: WARHAMMER III",
-        "portada": "../assets/img/games/tww3.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/tww3.webp?token=GHSAT0AAAAAACKVI2AAAJOZ27OFUTYBH6FEZMGCFMQ",
         "trailer": "https://www.youtube.com/embed/6KaMt91ELHU",
         "descripcion": "El final cataclísmico de la trilogía de Total War™: WARHAMMER® ha llegado. Reagrupa a tus fuerzas y adéntrate en el Reino del Caos, una dimensión de terrores horripilantes en la que se decidirá el destino del mundo. ¿Conquistarás a tus demonios... o los dirigirás?",
         "genero": "estrategia",
         "tipo": "etr",
-        "precio": 8499
+        "precio": 18212
     },
     {
         "id": 18,
         "nombre": "STAR WARS JEDI: SURVIVOR™",
-        "portada": "../assets/img/games/swjs.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/swjs.webp?token=GHSAT0AAAAAACKVI2ABIQXMUN33ZS55ME7MZMGCFTQ",
         "trailer": "https://www.youtube.com/embed/K873EKdQyPw",
         "descripcion": "La historia de Cal Kestis continúa en STAR WARS Jedi: Survivor™, un juego de acción en tercera persona de proporciones galácticas.",
         "genero": "aventuras",
         "tipo": "souls",
-        "precio": 8999
+        "precio": 22275
     },
     {
         "id": 19,
         "nombre": "ELDEN RING",
-        "portada": "../assets/img/games/er.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/er.webp?token=GHSAT0AAAAAACKVI2AAWT5P5TSSYJU754VCZMGCF3A",
         "trailer": "https://www.youtube.com/embed/rHoDGkpktPE",
         "descripcion": "EL NUEVO JUEGO DE ROL Y ACCIÓN DE AMBIENTACIÓN FANTÁSTICA. Álzate, Sinluz, y que la gracia te guíe para abrazar el poder del Círculo de Elden y encumbrarte como señor del Círculo en las Tierras Intermedias.",
         "genero": "aventuras",
         "tipo": "souls",
-        "precio": 8599
+        "precio": 21857
     },
     {
         "id": 20,
         "nombre": "SEKIRO™: SHADOWS DIE TWICE",
-        "portada": "../assets/img/games/ssdwgoty.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/ssdwgoty.webp?token=GHSAT0AAAAAACKVI2AANL7Z2SG4LGJV6IKAZMGCGBA",
         "trailer": "https://www.youtube.com/embed/beDelY2TftE",
         "descripcion": "Juego del año - The Game Awards 2019 Mejor juego de acción de 2019 - IGN Traza tu propio camino hacia la venganza en la galardonada aventura de FromSoftware, creadores de Bloodborne y la saga Dark Souls. Véngate. Restituye tu honor. Mata con ingenio.",
         "genero": "aventuras",
         "tipo": "souls",
-        "precio": 1299
+        "precio": 18212
     },
     {
         "id": 21,
         "nombre": "RUST",
-        "portada": "../assets/img/games/rust.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/rust.webp?token=GHSAT0AAAAAACKVI2ABINWYCXZEKX3MT7HSZMGCGIQ",
         "trailer": "https://www.youtube.com/embed/LGcECozNXEw",
         "descripcion": "The only aim in Rust is to survive. Everything wants you to die - the island's wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.",
         "genero": "aventuras",
         "tipo": "supervivencia",
-        "precio": 2440
+        "precio": 17172
     },
     {
         "id": 22,
         "nombre": "SUBNAUTICA",
-        "portada": "../assets/img/games/sn.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/sn.webp?token=GHSAT0AAAAAACKVI2AB6XK4WEY4FPCOSCYWZMGCGNQ",
         "trailer": "https://www.youtube.com/embed/8IvIFIz1hyM",
         "descripcion": "Desciende a las profundidades de un mundo submarino alienígena lleno de belleza y peligros. Crea equipamiento, pilota submarinos, terraforma el terreno, y burla los peligros para explorar exhuberantes arrecifes de coral, volcanes, sistemas de cuevas y más - Todo mientras intentas sobrevivir.",
         "genero": "aventuras",
         "tipo": "supervivencia",
-        "precio": 2100
+        "precio": 10125
     },
     {
         "id": 23,
         "nombre": "RESIDENT EVIL 4",
-        "portada": "../assets/img/games/re4r.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/re4r.webp?token=GHSAT0AAAAAACKVI2AA6SPM4OZ743KWVW6AZMGCGWQ",
         "trailer": "https://www.youtube.com/embed/XnIDTnKUScQ",
         "descripcion": "Sobrevivir es solo el principio. Con una mecánica de juego modernizada, una historia reimaginada y unos gráficos espectacularmente detallados, Resident Evil 4 supone el renacimiento de un gigante del mundo de los videojuegos.",
         "genero": "aventuras",
         "tipo": "supervivencia",
-        "precio": 12958
+        "precio": 18212
     },
     {
         "id": 24,
         "nombre": "HOGWARTS LEGACY",
-        "portada": "../assets/img/games/hl.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/hl.webp?token=GHSAT0AAAAAACKVI2ABZ3LCRWQLD753QJHOZMGCG5Q",
         "trailer": "https://www.youtube.com/embed/2_r8wLyeoKQ",
         "descripcion": "Hogwarts Legacy es un RPG inmersivo de acción en mundo abierto. Ahora puedes tomar el control de la acción y ser el centro de tu propia aventura en el mundo mágico.",
         "genero": "rol",
         "tipo": "openworld",
-        "precio": 8999
+        "precio": 18212
     },
     {
         "id": 25,
         "nombre": "MONSTER HUNTER: WORLD",
-        "portada": "../assets/img/games/mhw.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/mhw.webp?token=GHSAT0AAAAAACKVI2AAM5BK5M44XQCQAWHAZMGCHEQ",
         "trailer": "https://www.youtube.com/embed/VDp4b9Qw_O8",
         "descripcion": "¡Bienvenidos a un nuevo mundo! En Monster Hunter: World, la última entrega de la serie, podrás disfrutar de la mejor experiencia de juego, usando todos los recursos a tu alcance para acechar monstruos en un nuevo mundo rebosante de emociones y sorpresas.",
         "genero": "rol",
         "tipo": "openworld",
-        "precio": 2420
+        "precio": 6682
     },
     {
         "id": 26,
         "nombre": "NEW WORLD",
-        "portada": "../assets/img/games/nw.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/nw.webp?token=GHSAT0AAAAAACKVI2AA6FXSNOW5EXN24KI4ZMGCHKQ",
         "trailer": "https://www.youtube.com/embed/m1C5dLnvlzg",
         "descripcion": "Explora un emocionante MMO de mundo abierto repleto de peligros y oportunidades en el que forjarás un nuevo destino en la isla sobrenatural de Aetérnum.",
         "genero": "rol",
         "tipo": "openworld",
-        "precio": 2600
+        "precio": 10260
     },
     {
         "id": 27,
         "nombre": "FINAL FANTASY VII REMAKE INTERGRADE",
-        "portada": "../assets/img/games/ff7ri.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/ff7ri.webp?token=GHSAT0AAAAAACKVI2AAOVDDNSZXKNVQQMT2ZMGCHRA",
         "trailer": "https://www.youtube.com/embed/AmzcNYzsRbg",
         "descripcion": "Cloud Strife, exmiembro de Soldado, se adentra en la ciudad del mako, Midgar. El mundo del clásico juego FINAL FANTASY VII renace con gráficos de última generación, un nuevo sistema de combates y una aventura adicional con Yuffie Kirasagi como protagonista.",
         "genero": "rol",
         "tipo": "japones",
-        "precio": 7700
+        "precio": 22275
     },
     {
         "id": 28,
         "nombre": "PERSONA 5 ROYAL",
-        "portada": "../assets/img/games/p5r.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/p5r.webp?token=GHSAT0AAAAAACKVI2ABHL3OHMTIOTKWG5LYZMGCH2A",
         "trailer": "https://www.youtube.com/embed/SKpSpvFCZRw",
         "descripcion": "Ponte la máscara, acompaña a los Ladrones Fantasma de Corazones en sus asaltos ¡e infíltrate en la mente de los corruptos para hacerles cambiar de opinión!",
         "genero": "rol",
         "tipo": "japones",
-        "precio": 7999
+        "precio": 18212
     },
     {
         "id": 29,
         "nombre": "DRAGON BALL Z: KAKAROT",
-        "portada": "../assets/img/games/dbzk.webp",
+        "portada": "https://raw.githubusercontent.com/ReveinDev/Reve-Database/main/Images/Games/dbzk.webp?token=GHSAT0AAAAAACKVI2AB2TGIU3EY2RMJB3HIZMGCIAQ",
         "trailer": "https://www.youtube.com/embed/RoAG2g8oXQw",
         "descripcion": "¡Revive la historia de Son Goku y otros Guerreros Z en DRAGON BALL Z: KAKAROT! Conoce el mundo de DRAGON BALL Z no solo por sus épicos combates, sino también mientras luchas, pescas, comes y entrenas con Son Goku, Son Gohan, Vegeta y muchos más.",
         "genero": "rol",
         "tipo": "japones",
-        "precio": 7119
+        "precio": 9112
     }
 ]
