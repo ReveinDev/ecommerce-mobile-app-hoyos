@@ -2,11 +2,18 @@ import { StyleSheet, Text, Pressable } from "react-native";
 import React from "react";
 import { Card } from "./Card";
 import { colors } from "../global/colors";
+import { useDispatch } from "react-redux";
+import { setCategorySelected } from "../features/shop/shopSlice";
 
 export const CategoryItem = ({ category, navigation }) => {
+  const dispatch = useDispatch();
+
   return (
     <Pressable
-      onPress={() => navigation.navigate("Juegos", { category })}
+      onPress={() => {
+        dispatch(setCategorySelected(category));
+        navigation.navigate("Juegos", { category });
+      }}
       style={styles.buttonStyle}
     >
       <Card style={{ alignItems: "center" }}>

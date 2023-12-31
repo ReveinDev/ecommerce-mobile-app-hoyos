@@ -1,8 +1,10 @@
 import React from "react";
 import { registerRootComponent } from "expo";
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator, StatusBar, View } from "react-native";
 import { useFonts } from "expo-font";
 import { TabNavigator } from "./navigation/TabNavigator";
+import { Provider } from "react-redux";
+import store from "./store";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -17,7 +19,11 @@ export default function App() {
     return <ActivityIndicator />;
   }
 
-  return <TabNavigator />;
+  return (
+    <Provider store={store}>
+      <TabNavigator />
+    </Provider>
+  );
 }
 
 registerRootComponent(App);

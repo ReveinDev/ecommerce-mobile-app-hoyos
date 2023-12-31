@@ -1,20 +1,13 @@
 import { FlatList, StyleSheet, View } from "react-native";
-import React, { useEffect, useState } from "react";
-import games from "../data/games.json";
+import React from "react";
 import { ProductItem } from "../components/ProductItem";
 import { colors } from "../global/colors";
+import { useSelector } from "react-redux";
 
 export const ProductsByCategory = ({ navigation, route }) => {
-  const [gamesByCategory, setGamesByCategory] = useState([]);
-
-  const { category } = route.params;
-
-  useEffect(() => {
-    const gamesFilterByCategory = games.filter(
-      (game) => game.genero === category
-    );
-    setGamesByCategory(gamesFilterByCategory);
-  }, [category]);
+  const gamesFilteredByCategory = useSelector(
+    (state) => state.shopSlice.gamesFilteredByCategory
+  );
 
   const renderItem = ({ item }) => (
     <ProductItem item={item} navigation={navigation} />
@@ -24,7 +17,7 @@ export const ProductsByCategory = ({ navigation, route }) => {
     <View style={styles.gamesContainer}>
       <FlatList
         style={styles.gamesContainer}
-        data={gamesByCategory}
+        data={gamesFilteredByCategory}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
