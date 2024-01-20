@@ -3,13 +3,21 @@ import React from "react";
 import { Card } from "./Card";
 import { Pressable } from "react-native";
 import { colors } from "../global/colors";
+import { useDispatch } from "react-redux";
+import { setGameIdSelected, setGameSelected } from "../features/shop/shopSlice";
 
 export const ProductItem = ({ item, navigation }) => {
+  const dispatch = useDispatch();
+
   return (
     <Card style={styles.gamesContainer}>
       <Pressable
         style={styles.gameButton}
-        onPress={() => navigation.navigate("Detalle", { item })}
+        onPress={() => {
+          dispatch(setGameIdSelected(item.id));
+          dispatch(setGameSelected(item.id));
+          navigation.navigate("Detalle", item.id);
+        }}
       >
         <Image
           style={styles.imageProductItem}

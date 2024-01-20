@@ -11,9 +11,11 @@ export const CartItem = ({ item }) => {
       <View>
         <Text style={styles.cartTitle}>{item.nombre}</Text>
         <Text style={styles.cartCategory}>{item.genero}</Text>
-        <Text style={styles.cartPrice}>{item.precio}</Text>
         <Text style={styles.cartPrice}>
-          Cantidad: {item.cantidad}, Total: {item.cantidad * item.precio}
+          $ {item.precio.toLocaleString("de-DE")}
+        </Text>
+        <Text style={styles.cartPrice}>
+          Cantidad: {item.quantity} / Total: $ {item.quantity * item.precio}
         </Text>
       </View>
       <Pressable style={styles.trashCart} onPress={null}>
@@ -38,19 +40,19 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
   },
   cartTitle: {
-    fontFamily: "Rubik-Regular",
-    textTransform: "capitalize",
-    fontSize: 20,
+    fontFamily: "BebasNeue-Regular",
+    textTransform: "uppercase",
+    fontSize: 23,
   },
   cartCategory: {
-    fontFamily: "BebasNeue-Regular",
+    fontFamily: "Rubik-Regular",
     textTransform: "capitalize",
-    fontSize: 15,
+    fontSize: 18,
   },
   cartPrice: {
     fontFamily: "Teko-Regular",
     textTransform: "capitalize",
-    fontSize: 16,
+    fontSize: 20,
     color: colors.mainColor,
   },
 });

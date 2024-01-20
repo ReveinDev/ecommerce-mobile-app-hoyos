@@ -6,41 +6,71 @@ import {
   Text,
   View,
   useWindowDimensions,
+  ActivityIndicator,
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { colors } from "../global/colors";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../features/shop/cartSlice";
 
 export const ProductDetail = ({ route }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   const [isPortrait, setIsProtrait] = useState(true);
 
   const { height, width } = useWindowDimensions();
 
-  const { item } = route.params;
+  const gameId = route.params;
+
+  const gameSelected = useSelector((state) => state.shopSlice.gameSelected);
 
   useEffect(() => {
     height < width ? setIsProtrait(false) : setIsProtrait(true);
   }, [height]);
 
+  useEffect(() => {
+    setIsLoading(false);
+  }, [gameId]);
+
+  const dispatch = useDispatch();
+
+  const addGameToCart = () => {
+    dispatch(addToCart({ ...gameSelected, quantity: 1 }));
+  };
+
   return (
     <>
-      <ScrollView contentContainerStyle={styles.gameDetailContainer}>
-        <Image
-          source={{ uri: item.portada }}
-          style={
-            isPortrait
-              ? styles.gameDetailImage
-              : styles.gameDetailImageLandscape
-          }
-        />
-        <View style={{ alignItems: "center" }}>
-          <Text style={styles.gameDetailTitle}>{item.nombre}</Text>
-          <Text style={styles.gameDetailDescription}>{item.descripcion}</Text>
-          <Text style={styles.gameDetailPrice}>$ {item.precio}</Text>
-          <Pressable style={styles.gameDetailBuyButton} onPress={() => null}>
-            <Text style={styles.gameDetailBuyButtonText}>COMPRAR</Text>
-          </Pressable>
-        </View>
-      </ScrollView>
+      {isLoading ? (
+        <ActivityIndicator />
+      ) : (
+        <>
+          <ScrollView contentContainerStyle={styles.gameDetailContainer}>
+            <Image
+              source={{ uri: gameSelected.portada }}
+              style={
+                isPortrait
+                  ? styles.gameDetailImage
+                  : styles.gameDetailImageLandscape
+              }
+            />
+            <View style={{ alignItems: "center" }}>
+              <Text style={styles.gameDetailTitle}>{gameSelected.nombre}</Text>
+              <Text style={styles.gameDetailDescription}>
+                {gameSelected.descripcion}
+              </Text>
+              <Text style={styles.gameDetailPrice}>
+                $ {gameSelected.precio}
+              </Text>
+              <Pressable
+                style={styles.gameDetailBuyButton}
+                onPress={addGameToCart}
+              >
+                <Text style={styles.gameDetailBuyButtonText}>COMPRAR</Text>
+              </Pressable>
+            </View>
+          </ScrollView>
+        </>
+      )}
     </>
   );
 };

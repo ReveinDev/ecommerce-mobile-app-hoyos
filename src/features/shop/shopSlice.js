@@ -10,6 +10,7 @@ export const shopSlice = createSlice({
     gamesData: games,
     categoriesData: categories,
     gamesFilteredByCategory: [],
+    gameSelected: {},
   },
   reducers: {
     setCategorySelected: (state, action) => {
@@ -19,9 +20,12 @@ export const shopSlice = createSlice({
     setGameIdSelected: (state, action) => {
       state.gameIdSelected = action.payload;
     },
+    setGameSelected: (state, action) => {
+      state.gameSelected = state.gamesData.find(game => game.id === action.payload);
+    }
   },
 });
 
-export const { setCategorySelected, setGameIdSelected } = shopSlice.actions;
+export const { setCategorySelected, setGameIdSelected, setGameSelected } = shopSlice.actions;
 
 export default shopSlice.reducer;

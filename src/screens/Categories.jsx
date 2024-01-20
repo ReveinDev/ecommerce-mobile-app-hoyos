@@ -2,10 +2,10 @@ import { FlatList, StyleSheet, View } from "react-native";
 import React from "react";
 import { CategoryItem } from "../components/CategoryItem";
 import { colors } from "../global/colors";
-import { useSelector } from "react-redux";
+import { useGetCategoriasQuery } from "../services/shopService";
 
 export const Categories = ({ navigation }) => {
-  const categories = useSelector((state) => state.shopSlice.categoriesData);
+  const { data } = useGetCategoriasQuery();
 
   const renderItem = ({ item }) => (
     <CategoryItem category={item} navigation={navigation} />
@@ -16,7 +16,7 @@ export const Categories = ({ navigation }) => {
       <FlatList
         style={styles.categoriesContainer}
         renderItem={renderItem}
-        data={categories}
+        data={data}
         keyExtractor={(item) => item}
       />
     </View>

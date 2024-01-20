@@ -1,32 +1,31 @@
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
-import React, { useEffect, useState } from "react";
-import cart from "../data/cart";
+import React from "react";
 import { CartItem } from "../components/CartItem";
 import { colors } from "../global/colors";
+import { useSelector } from "react-redux";
+import { usePostOrderMutation } from "../services/shopService";
 
 export const Cart = () => {
-  const [total, setTotal] = useState(0);
+  const cartItems = useSelector((state) => state.cartSlice.cartItems);
+  const total = useSelector((state) => state.cartSlice.total);
+  const [triggerPost, result] = usePostOrderMutation();
 
-  useEffect(() => {
-    const total = cart.reduce(
-      (acc, item) => (acc += item.precio * item.cantidad),
-      0
-    );
-    setTotal(total);
-  }, [cart]);
+  const confirmCart = () => {
+    triggerPost({total, cartItems, user: 'loggedUser'});
+  }
 
   const renderCartItems = ({ item }) => <CartItem item={item} />;
 
   return (
     <View style={styles.cartContainer}>
       <FlatList
-        data={cart}
+        data={cartItems}
         renderItem={renderCartItems}
         keyExtractor={(item) => item.id}
       />
       <View style={styles.cartConfirm}>
         <Text style={styles.totalPrice}>Total: ${total}</Text>
-        <Pressable style={styles.confirmButton} onPress={null}>
+        <Pressable style={styles.confirmButton} onPress={confirmCart}>
           <Text style={styles.textConfirm}>Confirmar</Text>
         </Pressable>
       </View>
@@ -39,15 +38,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   cartConfirm: {
-    marginBottom: 130,
+    backgroundColor: colors.mainDark,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 25,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
   },
   totalPrice: {
     fontSize: 16,
     fontFamily: "PressStart2P-Regular",
+    color: colors.mainLight,
+    marginTop: 10,
   },
   confirmButton: {
     backgroundColor: colors.secondaryColor,
@@ -58,5 +60,6 @@ const styles = StyleSheet.create({
     fontFamily: "ArchivoBlack-Regular",
     fontSize: 16,
     color: colors.mainColor,
+    textTransform: "uppercase",
   },
 });
