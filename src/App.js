@@ -1,8 +1,8 @@
 import React from "react";
 import { registerRootComponent } from "expo";
-import { ActivityIndicator, StatusBar, View } from "react-native";
+import { ActivityIndicator } from "react-native";
 import { useFonts } from "expo-font";
-import { TabNavigator } from "./navigation/TabNavigator";
+import { MainNavigator } from "./navigation/MainNavigator";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <TabNavigator />
+      <MainNavigator />
     </Provider>
   );
 }

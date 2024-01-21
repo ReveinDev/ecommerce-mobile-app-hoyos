@@ -15,17 +15,22 @@ export const shopSlice = createSlice({
   reducers: {
     setCategorySelected: (state, action) => {
       state.categorySelected = action.payload;
-      state.gamesFilteredByCategory = state.gamesData.filter(game => game.genero === state.categorySelected);
+      state.gamesFilteredByCategory = state.gamesData.filter(
+        (game) => game.genero === state.categorySelected
+      );
     },
     setGameIdSelected: (state, action) => {
       state.gameIdSelected = action.payload;
     },
     setGameSelected: (state, action) => {
-      state.gameSelected = state.gamesData.find(game => game.id === action.payload);
-    }
+      state.gameSelected = state.gamesData.find(
+        (game) => game.id === action.payload
+      );
+    },
   },
 });
 
-export const { setCategorySelected, setGameIdSelected, setGameSelected } = shopSlice.actions;
+export const { setCategorySelected, setGameIdSelected, setGameSelected } =
+  shopSlice.actions;
 
 export default shopSlice.reducer;
