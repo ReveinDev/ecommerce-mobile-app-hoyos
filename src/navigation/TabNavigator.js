@@ -3,8 +3,9 @@ import { ShopNavigator } from "./ShopNavigator";
 import { CartNavigator } from "./CartNavigator";
 import { StyleSheet, View } from "react-native";
 import { colors } from "../global/colors";
-import { SimpleLineIcons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { SimpleLineIcons, MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
 import { OrdersNavigator } from "./OrdersNavigator";
+import { ProfileNavigator } from "./ProfileNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -60,6 +61,23 @@ export const TabNavigator = () => {
               <View>
                 <MaterialCommunityIcons
                   name="format-list-bulleted"
+                  size={30}
+                  color={focused ? colors.mainLight : colors.mainDark}
+                />
+              </View>
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileNavigator}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <View>
+                <FontAwesome
+                  name="user-circle-o"
                   size={30}
                   color={focused ? colors.mainLight : colors.mainDark}
                 />
