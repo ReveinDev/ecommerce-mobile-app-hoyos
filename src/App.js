@@ -5,8 +5,15 @@ import { useFonts } from "expo-font";
 import { MainNavigator } from "./navigation/MainNavigator";
 import { Provider } from "react-redux";
 import store from "./store";
+import { initDatabase } from "./db";
 
 export default function App() {
+  initDatabase()
+    .then(() => console.log("Database initialized"))
+    .catch((tx, error) =>
+      console.log("Error initializing database: ", error.message)
+    );
+
   const [fontsLoaded] = useFonts({
     "BebasNeue-Regular": require("./assets/fonts/BebasNeue-Regular.ttf"),
     "PressStart2P-Regular": require("./assets/fonts/PressStart2P-Regular.ttf"),

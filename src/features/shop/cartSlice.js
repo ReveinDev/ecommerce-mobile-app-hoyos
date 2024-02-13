@@ -50,6 +50,17 @@ export const cartSlice = createSlice({
       state.cartItems = state.cartItems.filter(
         (item) => item.id !== action.payload
       );
+      const total = state.cartItems.reduce(
+        (acc, item) => (acc += item.quantity * item.precio),
+        0
+      )
+      state.total = total
+      state = {
+        ...state,
+        cartItems: state.cartItems,
+        total,
+        updateAt: Date.now().toLocaleString(),
+      }
     },
   },
 });

@@ -1,11 +1,10 @@
 import { Pressable, StyleSheet, Text, View, Image } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import { colors } from "../global/colors";
 import { useSelector } from "react-redux";
 
 export const Profile = ({ navigation }) => {
   const image = useSelector((state) => state.authSlice.profilePicture);
-
   return (
     <View style={styles.container}>
       <View>

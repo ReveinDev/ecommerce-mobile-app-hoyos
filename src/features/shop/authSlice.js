@@ -20,9 +20,15 @@ export const authSlice = createSlice({
     setProfilePicture: (state, action) => {
       state.profilePicture = action.payload;
     },
+    logout: (state) => {
+      state.user = null,
+      state.token = null,
+      state.localId = null,
+      state.profilePicture = null
+    }
   },
 });
 
-export const { setUser, removeUser, setProfilePicture } = authSlice.actions;
+export const { setUser, removeUser, setProfilePicture, logout } = authSlice.actions;
 
 export default authSlice.reducer;

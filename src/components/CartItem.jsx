@@ -3,8 +3,12 @@ import React from "react";
 import { Card } from "./Card";
 import { colors } from "../global/colors";
 import { Ionicons } from "@expo/vector-icons";
+import { removeFromCart } from "../features/shop/cartSlice";
+import { useDispatch } from "react-redux";
 
 export const CartItem = ({ item }) => {
+  const dispatch = useDispatch();
+
   return (
     <Card style={styles.cartItemContainer}>
       <Image style={styles.imageCartItem} source={{ uri: item.portada }} />
@@ -18,7 +22,7 @@ export const CartItem = ({ item }) => {
           Cantidad: {item.quantity} / Total: $ {item.quantity * item.precio}
         </Text>
       </View>
-      <Pressable style={styles.trashCart} onPress={null}>
+      <Pressable style={styles.trashCart} onPress={() => dispatch(removeFromCart(item.id))}>
         <Ionicons name="trash-bin" size={24} color={colors.mainDark} />
       </Pressable>
     </Card>

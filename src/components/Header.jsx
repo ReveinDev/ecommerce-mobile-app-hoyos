@@ -9,12 +9,23 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { colors } from "../global/colors";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Entypo } from "@expo/vector-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../features/shop/authSlice";
+import { removeSession } from "../db";
 
 export const Header = ({ titleProp, navigation }) => {
   const [isPortrait, setIsProtrait] = useState(true);
-
   const { height, width } = useWindowDimensions();
+  const localId = useSelector(state => state.authSlice.localId);
+  const email = useSelector(state => state.authSlice.user);
+  const dispatch = useDispatch();
+
+  const onLogout = () => {
+    dispatch(logout())
+    const deletedSession = removeSession(localId);
+    console.log("Session deleted: ", deletedSession);
+  }
 
   useEffect(() => {
     height < width ? setIsProtrait(false) : setIsProtrait(true);
@@ -50,6 +61,11 @@ export const Header = ({ titleProp, navigation }) => {
             </Pressable>
           ) : null}
           <Text style={styles.categoryText}>{titleProp}</Text>
+          {email && (
+            <Pressable style={styles.logoutBtn} onPress={onLogout}>
+              <Entypo name="log-out" size={30} color={colors.mainColor} />
+            </Pressable>
+          )}
         </View>
       </ScrollView>
     </>
@@ -104,4 +120,8 @@ const styles = StyleSheet.create({
     fontFamily: "BebasNeue-Regular",
     paddingStart: 20,
   },
+  logoutBtn: {
+    position: "absolute",
+    right: 20,
+  }
 });

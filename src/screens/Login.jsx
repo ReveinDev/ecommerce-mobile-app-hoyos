@@ -5,6 +5,7 @@ import { InputForm } from "../components/Input";
 import { useSignInMutation } from "../services/authService";
 import { useDispatch } from "react-redux";
 import { setUser } from "../features/shop/authSlice";
+import { insertSession } from "../db";
 
 export const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -20,14 +21,27 @@ export const Login = ({ navigation }) => {
 
   useEffect(() => {
     if (result.data) {
+      console.log(result.data);
       dispatch(setUser(result.data));
+      insertSession({
+        localId: result.data.localId,
+        email: result.data.email,
+        token: result.data.idToken,
+      })
+        .then((result) => console.log("Exito al guardar sesion: ", result))
+        .catch((error) => console.log("Error al guardar sesion: ",error.message));
     }
   }, [result]);
 
   return (
     <View style={styles.container}>
       <InputForm label="Email:" onChange={setEmail} error="" />
-      <InputForm label="Password:" onChange={setPassword} error="" isSecure={true} />
+      <InputForm
+        label="Password:"
+        onChange={setPassword}
+        error=""
+        isSecure={true}
+      />
       <Pressable style={styles.button} onPress={onSubmit}>
         <Text style={styles.buttonText}>Ingresar</Text>
       </Pressable>
